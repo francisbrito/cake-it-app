@@ -13,12 +13,12 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 # apply changes to shell environment
 # MAY NOT NEED TO DO THIS
-exec $SHELL
+source .bashrc
 
 # install ruby-build
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
+source .bashrc
 
 # install ruby
 rbenv install 2.1.3
